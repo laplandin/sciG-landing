@@ -11,7 +11,6 @@
     <li data-menuanchor="1"><a href="#1">First section</a></li>
     <li data-menuanchor="2"><a href="#2">Second section</a></li>
     <li data-menuanchor="3"><a href="#3">Third section</a></li>
-    <li data-menuanchor="4"><a href="#4">Fourth section</a></li>
   </ul>
 
   <div id="fullpage">
@@ -20,7 +19,7 @@
       <div class="section__content">
         <h2>Эффективный поиск научных исследований</h2>
         <p>Усовершенствуй научный поиск!</p>
-        <a class="section__btn" href="#">Искать</a>
+        <a class="section__btn" href="#" target="_blank">Искать</a>
       </div>
       <a href="#2" class="button__next" data-menuanchor="2">
         <span>
@@ -31,9 +30,12 @@
       </a>
     </section>
   	<section class="section section--2" data-anchor="2">
+      <div class="section__image">
+        <img src="img/slide-2.jpg" alt="">
+      </div>
       <div class="section__content">
         <h2>Ускоряем поиск Российской науки</h1>
-        <p>Современный российский ученый вынужден искать информацию о&nbsp;совей научной деятельности. Зачастую этот поиск не&nbsp;дает желаемых результатов.</p>
+        <p>Современный российский ученый вынужден искать информацию о&nbsp;своей научной деятельности. Зачастую этот поиск не&nbsp;дает желаемых результатов.</p>
         <p>Граф науки изменит это!</p>
       </div>
       <a href="#3" class="button__next" data-menuanchor="3">
@@ -44,20 +46,14 @@
         </span>
       </a>
     </section>
-  	<section class="section" data-anchor="3">
-      <div class="section__content">
-      </div>
-      <a href="#4" class="button__next" data-menuanchor="4">
-        <span>
-          <svg width="40" height="40">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprite.svg#icon-arrow-down"></use>
-          </svg>
-        </span>
-      </a>
-    </section>
-  	<section class="section" data-anchor="4">
-      <div class="section__content">
-      </div>
+  	<section class="section section--3" data-anchor="3">
+        <div class="section__content">
+          <h2>Визуализация&nbsp;-&nbsp;ключ к правильному поиску.</h1>
+          <p>Результат поиска&nbsp;-&nbsp;связанный граф, который будет разростаться с&nbsp;уточнением связей.</p>
+        </div>
+        <div class="section__image">
+          <img src="img/slide-3.png" alt="">
+        </div>
       <a href="#1" class="button__next" data-menuanchor="1">
         <span>
           <svg width="40" height="40">
@@ -66,6 +62,7 @@
         </span>
       </a>
     </section>
+
   </div>
   {{/inline}}
 
