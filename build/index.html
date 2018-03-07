@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywwords" content=""/>
     <meta name="description" content=""/>
-    <link rel="shortcut icon" href="" type="image/png">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
 
 
     <script
@@ -20,7 +20,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <title>
-            Index
+            Граф Науки
     </title>
 
 </head>
@@ -29,14 +29,8 @@
 
   <nav class="main-nav">
     <h1 class="main-nav__logo" title="Граф науки">G</h1>
-    <a href="#" class="main-nav__link">Log In</a>
+    <a href="#" class="main-nav__link">Войти</a>
   </nav>
-
-  <ul id="menu">
-    <li data-menuanchor="1"><a href="#1">First section</a></li>
-    <li data-menuanchor="2"><a href="#2">Second section</a></li>
-    <li data-menuanchor="3"><a href="#3">Third section</a></li>
-  </ul>
 
   <div id="fullpage">
   	<section class="section section--1" data-anchor="1">
@@ -48,12 +42,11 @@
       </div>
       <a href="#2" class="button__next" data-menuanchor="2">
         <span>
-          <svg width="40" height="40">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprite.svg#icon-arrow-down"></use>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg"  width="40" height="40" viewBox="0 0 451.847 451.847"><path d="M225.923 354.706c-8.098 0-16.195-3.092-22.369-9.263L9.27 151.157c-12.359-12.359-12.359-32.397 0-44.751 12.354-12.354 32.388-12.354 44.748 0l171.905 171.915 171.906-171.909c12.359-12.354 32.391-12.354 44.744 0 12.365 12.354 12.365 32.392 0 44.751L248.292 345.449c-6.177 6.172-14.274 9.257-22.369 9.257z"/></svg>
         </span>
       </a>
     </section>
+
   	<section class="section section--2" data-anchor="2">
       <div class="section__image">
         <img src="img/slide-2.jpg" alt="">
@@ -65,41 +58,146 @@
       </div>
       <a href="#3" class="button__next" data-menuanchor="3">
         <span>
-          <svg width="40" height="40">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprite.svg#icon-arrow-down"></use>
-          </svg>
-        </span>
-      </a>
-    </section>
-  	<section class="section section--3" data-anchor="3">
-        <div class="section__content">
-          <h2>Визуализация&nbsp;-&nbsp;ключ к правильному поиску.</h1>
-          <p>Результат поиска&nbsp;-&nbsp;связанный граф, который будет разростаться с&nbsp;уточнением связей.</p>
-        </div>
-        <div class="section__image">
-          <img src="img/slide-3.png" alt="">
-        </div>
-      <a href="#1" class="button__next" data-menuanchor="1">
-        <span>
-          <svg width="40" height="40">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprite.svg#icon-arrow-down"></use>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg"  width="40" height="40" viewBox="0 0 451.847 451.847"><path d="M225.923 354.706c-8.098 0-16.195-3.092-22.369-9.263L9.27 151.157c-12.359-12.359-12.359-32.397 0-44.751 12.354-12.354 32.388-12.354 44.748 0l171.905 171.915 171.906-171.909c12.359-12.354 32.391-12.354 44.744 0 12.365 12.354 12.365 32.392 0 44.751L248.292 345.449c-6.177 6.172-14.274 9.257-22.369 9.257z"/></svg>
         </span>
       </a>
     </section>
 
+  	<section class="section section--3" data-anchor="3">
+      <div class="section__content">
+        <h2>Визуализация&nbsp;-&nbsp;ключ к правильному поиску.</h1>
+        <p>Результат поиска&nbsp;-&nbsp;связанный граф, который будет разростаться с&nbsp;уточнением связей.</p>
+      </div>
+      <div class="section__image">
+        <svg id="d3-graph" width="400" height="400"></svg>
+      </div>
+      <a href="#4" class="button__next" data-menuanchor="1">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg"  width="40" height="40" viewBox="0 0 451.847 451.847"><path d="M225.923 354.706c-8.098 0-16.195-3.092-22.369-9.263L9.27 151.157c-12.359-12.359-12.359-32.397 0-44.751 12.354-12.354 32.388-12.354 44.748 0l171.905 171.915 171.906-171.909c12.359-12.354 32.391-12.354 44.744 0 12.365 12.354 12.365 32.392 0 44.751L248.292 345.449c-6.177 6.172-14.274 9.257-22.369 9.257z"/></svg>
+        </span>
+      </a>
+    </section>
+
+    <section class="section section--4" data-anchor="4">
+        <div class="section__content">
+          <h2>Визуальный каталог Российской науки</h2>
+          <div class="hexagon">
+            <ul class="hexagon__list">
+              <li class="hexagon__item hexagon__item--beaker-atom">
+                <span></span>
+              </li>
+              <li class="hexagon__item hexagon__item--checkboard-graph">
+                <span></span>
+              </li>
+              <li class="hexagon__item hexagon__item--cube-molecule">
+                <span></span>
+              </li>
+              <li class="hexagon__item hexagon__item--dna">
+                <span></span>
+              </li>
+              <li class="hexagon__item hexagon__item--globe">
+                <span></span>
+              </li>
+              <li class="hexagon__item hexagon__item--genetics">
+                <span></span>
+              </li>
+              <li class="hexagon__item hexagon__item--head-brains">
+                <span></span>
+              </li>
+              <li class="hexagon__item hexagon__item--lab-flask-leaf">
+                <span></span>
+              </li>
+              <li class="hexagon__item hexagon__item--magnet">
+                <span></span>
+              </li>
+              <li class="hexagon__item hexagon__item--microscope">
+                <span></span>
+              </li>
+              <li class="hexagon__item hexagon__item--nuclear-symbol">
+                <span></span>
+              </li>
+              <li class="hexagon__item hexagon__item--rocket">
+                <span></span>
+              </li>
+              <li class="hexagon__item hexagon__item--satellite">
+                <span></span>
+              </li>
+              <li class="hexagon__item hexagon__item--telescope">
+                <span></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <a href="#5" class="button__next" data-menuanchor="5">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg"  width="40" height="40" viewBox="0 0 451.847 451.847"><path d="M225.923 354.706c-8.098 0-16.195-3.092-22.369-9.263L9.27 151.157c-12.359-12.359-12.359-32.397 0-44.751 12.354-12.354 32.388-12.354 44.748 0l171.905 171.915 171.906-171.909c12.359-12.354 32.391-12.354 44.744 0 12.365 12.354 12.365 32.392 0 44.751L248.292 345.449c-6.177 6.172-14.274 9.257-22.369 9.257z"/></svg>
+        </span>
+      </a>
+    </section>
+
+    <section class="section section--5" data-anchor="5">
+        <div class="section__content">
+          <h2><strong>Открытые данные</strong></br>Российской науки</h1>
+          <ul id="hightlight">
+            <li>
+              <span>
+                Электронная библиотека дисертаций</li>
+              </span>
+            <li>
+              <span>
+                Более 80 тысяч научных организаций</li>
+              </span>
+            <li>
+              <span>
+                Более 800 тысяч научных работ</li>
+              </span>
+          </ul>
+        </div>
+      <a href="#6" class="button__next" data-menuanchor="1">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg"  width="40" height="40" viewBox="0 0 451.847 451.847"><path d="M225.923 354.706c-8.098 0-16.195-3.092-22.369-9.263L9.27 151.157c-12.359-12.359-12.359-32.397 0-44.751 12.354-12.354 32.388-12.354 44.748 0l171.905 171.915 171.906-171.909c12.359-12.354 32.391-12.354 44.744 0 12.365 12.354 12.365 32.392 0 44.751L248.292 345.449c-6.177 6.172-14.274 9.257-22.369 9.257z"/></svg>
+        </span>
+      </a>
+    </section>
+
+    <section class="section section--6" data-anchor="6">
+      <div class="section__content">
+        <h2><b>Напиши дисертацию быстрее</b></br>Визуализируй структуру своей диссертации</h1>
+        <div class="section__column">
+          <p>Визуальное планирование</br>диссертации&nbsp;&mdash; определения всех необходимых задач, решаемых в&nbsp;ходе научной работы.</p>
+          <p>Эталонная структура всех возможных видов задач, которые могут быть решены при написании диссертации.</p>
+          <p>Разработай структуру диссертации в&nbsp;виде карты ума.</p>
+        </div>
+        <div class="section__image">
+          <img src="img/mindmap.jpg" alt="">
+        </div>
+      </div>
+      <a href="#1" class="button__next" data-menuanchor="1">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg"  width="40" height="40" viewBox="0 0 451.847 451.847"><path d="M225.923 354.706c-8.098 0-16.195-3.092-22.369-9.263L9.27 151.157c-12.359-12.359-12.359-32.397 0-44.751 12.354-12.354 32.388-12.354 44.748 0l171.905 171.915 171.906-171.909c12.359-12.354 32.391-12.354 44.744 0 12.365 12.354 12.365 32.392 0 44.751L248.292 345.449c-6.177 6.172-14.274 9.257-22.369 9.257z"/></svg>
+        </span>
+      </a>
+    </section>
+
+    <ul id="menu">
+      <li data-menuanchor="1"><a href="#1">1</a></li>
+      <li data-menuanchor="2"><a href="#2">2</a></li>
+      <li data-menuanchor="3"><a href="#3">3</a></li>
+      <li data-menuanchor="4"><a href="#4">4</a></li>
+      <li data-menuanchor="5"><a href="#5">5</a></li>
+      <li data-menuanchor="6"><a href="#6">6</a></li>
+      <li class="indicator"></li>
+    </ul>
   </div>
 
 
-      <footer class="footer-main">
 
-      </footer>
-    
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <!-- Plugins -->
     <script src="plugins/jquery/jquery-3.2.1.min.js"></script>
     <script src="plugins/fullpage/jquery.fullpage.min.js"></script>
     <script src="plugins/particles/particles.min.js"></script>
+    <script src="plugins/d3/d3.min.js"></script>
     <script>console.log("custom script")</script>
 <script src="js/main.js"></script>
 </body>

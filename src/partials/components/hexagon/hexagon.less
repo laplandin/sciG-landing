@@ -1,160 +1,102 @@
-body {
-    background: rgb(123, 158, 158);
-}
-#hexGrid {
-  display: flex;
-  flex-wrap: wrap;
-  width: 90%;
-  margin: 0 auto;
-  overflow: hidden;
-  font-family: 'Raleway', sans-serif;
-  font-size: 15px;
-  list-style-type: none;
+.hexagon {
+  width: 903px;
+  margin-top: -25px;
 }
 
-.hex {
+.hexagon__list {
+  padding: 0;
+  margin: 0;
+
+  font-size: 0;
+
+  list-style: none;
+}
+
+.hexagon__item {
   position: relative;
-  visibility:hidden;
-  outline:1px solid transparent;
-}
-.hex::after{
-  content:'';
-  display:block;
-  padding-bottom: 86.602%;
-}
-.hexIn{
-  position: absolute;
-  width:96%;
-  padding-bottom: 110.851%;
-  margin:0 2%;
-  overflow: hidden;
-  visibility: hidden;
-  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
-  -webkit-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
-      -ms-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
-          transform: rotate3d(0,0,1,-60deg) skewY(30deg);
-}
-.hexIn * {
-  position: absolute;
-  visibility: visible;
-  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
-}
-.hexLink {
-    display:block;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    color: #fff;
-    overflow: hidden;
-    -webkit-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
-        -ms-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
-            transform: skewY(-30deg) rotate3d(0,0,1,60deg);
-}
 
-.hex img {
-  left: -100%;
-  right: -100%;
-  width: auto;
-  height: 100%;
-  margin: 0 auto;
-  -webkit-transform: rotate3d(0,0,0,0deg);
-      -ms-transform: rotate3d(0,0,0,0deg);
-          transform: rotate3d(0,0,0,0deg);
-}
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  margin-bottom: -2.7%;
 
-.hex h1, .hex p {
-  width: 100%;
-  padding: 5%;
-  box-sizing:border-box;
-  background-color: rgba(0, 128, 128, 0.8);
-  font-weight: 300;
-  -webkit-transition:  -webkit-transform .2s ease-out, opacity .3s ease-out;
-          transition:          transform .2s ease-out, opacity .3s ease-out;
-}
-.hex h1 {
-  bottom: 50%;
-  padding-top:50%;
-  font-size: 1.5em;
-  z-index: 1;
-  -webkit-transform:translate3d(0,-100%,0);
-      -ms-transform:translate3d(0,-100%,0);
-          transform:translate3d(0,-100%,0);
-}
-.hex h1::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 45%;
-  width: 10%;
-  text-align: center;
-  border-bottom: 1px solid #fff;
-}
-.hex p {
-  top: 50%;
-  padding-bottom:50%;
-  -webkit-transform:translate3d(0,100%,0);
-      -ms-transform:translate3d(0,100%,0);
-          transform:translate3d(0,100%,0);
-}
+  background-image: url("../img/hexagon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.7;
+  transition: all 0.2s linear;
 
-
-.hexLink:hover h1, .hexLink:focus h1,
-.hexLink:hover p, .hexLink:focus p{
-  -webkit-transform:translate3d(0,0,0);
-      -ms-transform:translate3d(0,0,0);
-          transform:translate3d(0,0,0);
-}
-
-@media (min-width:1201px) { /* <- 5-4  hexagons per row */
-  #hexGrid{
-    padding-bottom: 4.4%
+  &:nth-child(9n+6) {
+    margin-left: 10%;
   }
-  .hex {
-    width: 20%; /* = 100 / 5 */
+
+  span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
   }
-  .hex:nth-child(9n+6){ /* first hexagon of even rows */
-    margin-left:10%;  /* = width of .hex / 2  to indent even rows */
+
+  &--beaker-atom span {
+    background-image: url("../img/beaker-atom.svg");
+  }
+  &--checkboard-graph span {
+    background-image: url("../img/checkboard-graph.svg");
+  }
+  &--cube-molecule span {
+    background-image: url("../img/cube-molecule.svg");
+  }
+  &--dna span {
+    background-image: url("../img/dna.svg");
+  }
+  &--globe span {
+    background-image: url("../img/globe.svg");
+  }
+  &--genetics span {
+    background-image: url("../img/genetics.svg");
+  }
+  &--head-brains span {
+    background-image: url("../img/head-brains.svg");
+  }
+  &--lab-flask-leaf span {
+    background-image: url("../img/lab-flask-leaf.svg");
+  }
+  &--magnet span {
+    background-image: url("../img/magnet.svg");
+  }
+  &--microscope span {
+    background-image: url("../img/microscope.svg");
+  }
+  &--nuclear-symbol span {
+    background-image: url("../img/nuclear-symbol.svg");
+  }
+  &--rocket span {
+    background-image: url("../img/rocket.svg");
+  }
+  &--satellite span {
+    background-image: url("../img/satellite.svg");
+  }
+  &--telescope span {
+    background-image: url("../img/telescope.svg");
   }
 }
 
-@media (max-width: 1200px) and (min-width:901px) { /* <- 4-3  hexagons per row */
-  #hexGrid{
-    padding-bottom: 5.5%
-  }
-  .hex {
-    width: 25%; /* = 100 / 4 */
-  }
-  .hex:nth-child(7n+5){ /* first hexagon of even rows */
-    margin-left:12.5%;  /* = width of .hex / 2  to indent even rows */
-  }
+.zoomed {
+  opacity: 1;
+  transform: scale(1.15) !important;
 }
 
-@media (max-width: 900px) and (min-width:601px) { /* <- 3-2  hexagons per row */
-  #hexGrid{
-    padding-bottom: 7.4%
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
   }
-  .hex {
-    width: 33.333%; /* = 100 / 3 */
+  100% {
+    transform: scale(1);
   }
-  .hex:nth-child(5n+4){ /* first hexagon of even rows */
-    margin-left:16.666%;  /* = width of .hex / 2  to indent even rows */
-  }
-}
-
-@media (max-width: 600px) { /* <- 2-1  hexagons per row */
-  #hexGrid{
-    padding-bottom: 11.2%
-  }
-  .hex {
-    width: 50%; /* = 100 / 3 */
-  }
-  .hex:nth-child(3n+3){ /* first hexagon of even rows */
-    margin-left:25%;  /* = width of .hex / 2  to indent even rows */
-  }
-}
-
-@media (max-width: 400px) {
-    #hexGrid {
-        font-size: 13px;
-    }
 }

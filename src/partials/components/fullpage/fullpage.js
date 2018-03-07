@@ -3,7 +3,7 @@ $(document).ready(function() {
 		//Navigation
 		menu: '#menu',
 		lockAnchors: false,
-		anchors:['1', '2', '3', '4'],
+		anchors:['1', '2', '3', '4', '5'],
 		navigation: false,
 		navigationPosition: 'right',
 		navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -48,7 +48,7 @@ $(document).ready(function() {
 		controlArrows: true,
 		verticalCentered: true,
 		paddingTop: '100px',
-		paddingBottom: '30px',
+		paddingBottom: '15px',
 		responsiveWidth: 0,
 		responsiveHeight: 0,
 		responsiveSlides: false,
@@ -62,7 +62,43 @@ $(document).ready(function() {
 		lazyLoading: true,
 
 		//events
-		onLeave: function(index, nextIndex, direction){},
+		onLeave: function(index, nextIndex, direction){
+      if (nextIndex === 5) {
+        var i = 0;
+        function addHightlight () {
+          var activeItem = $("#hightlight li");
+
+            activeItem.eq(i % 3).addClass('active');
+            var timer = setTimeout(removeHightlight, 4500);
+        };
+
+        function removeHightlight () {
+          $("#hightlight li.active").removeClass("active");
+          i++;
+          addHightlight();
+        };
+
+        addHightlight();
+      }
+
+      if (nextIndex === 6) {
+        var i = 0;
+        function addBold () {
+          var activeItem = $(".section__column p");
+
+            activeItem.eq(i % 3).addClass('active');
+            var timer = setTimeout(removeBold, 4500);
+        };
+
+        function removeBold () {
+          $(".section__column p.active").removeClass("active");
+          i++;
+          addBold();
+        };
+
+        addBold();
+      }
+    },
 		afterLoad: function(anchorLink, index){},
 		afterRender: function(){},
 		afterResize: function(){},

@@ -155,8 +155,8 @@ gulp.task('cssVendor', function() {
 gulp.task('image:build', function() {
   return gulp.src(path.src.img)
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
+    //   imagemin.optipng({optimizationLevel: 3}),
+    //   imagemin.jpegtran({progressive: true}),
       imagemin.svgo({
         plugins: [{
           cleanupAttrs: true,
